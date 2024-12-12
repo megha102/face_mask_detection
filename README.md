@@ -107,6 +107,10 @@ python yolov5/val.py \
 ### Saved Testing Results
 - Results (e.g., precision, recall, mAP) are saved in:
   - `yolov5/runs/val/<exp_folder>`
+ 
+### Saved Detection Images Results
+- Results (Actual Images on which detection has been demonstrated)
+- 'runs/detect/results'
 
 ## Results
 
