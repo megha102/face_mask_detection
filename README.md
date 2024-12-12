@@ -89,7 +89,7 @@ python yolov5/train.py \
 - **40 Epochs**: `yolov5/runs/train/exp6` (2 GPUs)
 - **100 Epochs**: `yolov5/runs/train/exp9` (4 GPUs)
 - **200 Epochs**: `yolov5/runs/train/exp11` (4 GPUs)
-- **300 Epochs**: `yolov5/runs/train/exp13` (2 GPUs, 4 hours)
+- **140 Epochs**: `yolov5/runs/train/exp13` (4 GPUs)
 
 ## Testing
 
