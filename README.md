@@ -52,6 +52,7 @@ Final Project/
    ```
 3. Install YOLOv5 requirements:
    ```bash
+   git clone https://github.com/ultralytics/yolov5.git
    cd yolov5
    pip install -r requirements.txt
    ```
@@ -133,4 +134,4 @@ The model was tested on the split test set. Evaluation metrics include precision
 
 ---
 
-The Yolov5 folder was removed since it was taking too time. 
+The Yolov5 folder was removed since it was taking too much time. The results are saved in runs - detections. 
