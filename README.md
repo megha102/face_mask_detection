@@ -4,6 +4,8 @@ Face Mask Detection Using YOLOv5
 
 This project implements a face mask detection model using the YOLOv5 framework. The objective is to detect face mask usage across three categories: `with_mask`, `without_mask`, and `mask_weared_incorrect`. The dataset was sourced from Kaggle, preprocessed, augmented, and trained using YOLOv5 with hyperparameter modifications.
 
+The project was created with below structure but however due to size limitations - removed yolov5 folder. All the modifications were made from run command. But the customised train.py is still there in the scripts folder.
+
 ## Project Structure
 ```
 Final Project/
@@ -137,5 +139,3 @@ The model was tested on the split test set. Evaluation metrics include precision
 - Augmentation techniques improved model generalization.
 
 ---
-
-The Yolov5 folder was removed since it was taking too much time. The results are saved in runs - detections. 
