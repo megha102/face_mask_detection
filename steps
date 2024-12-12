@@ -1,0 +1,86 @@
+1) env file + activated env
+2) dataset downloaded and created in a separate folder
+3) converted data to yolo supported format 
+4) Visualize - the data split
+5) split data set of 852 images
+-> Training Set: 682 images.  80%
+-> Validation Set: 85 images. 10%
+-> Testing Set: 86 images.    10%
+
+6) created data.yml file - This file informs YOLOv5 where to find the train, val, and class names for the dataset.
+Why this is important:
+train: Location of training images and labels.
+val: Location of validation images and labels.
+nc: The number of classes (3 for "with_mask", "without_mask", "incorrect_mask").
+names: The class names corresponding to the YOLO class IDs (0, 1, 2).
+
+
+7) Setup for Train the YOLOv5 Model
+git clone https://github.com/ultralytics/yolov5.git
+cd yolov5
+pip install -r requirements.txt
+
+
+want to make training more challenging
+
+8) created a custom train.py script importing modules from yolov5 
+to modify training hyperparameters
+
+python scripts/train.py --data data/dataset_split/data.yaml \
+                        --cfg yolov5/models/yolov5s.yaml \
+                        --hyp yolov5/data/hyps/hyp.scratch-low.yaml \
+                        --epochs 50 \
+                        --batch-size 16 \
+                        --device mps \
+                        --save-dir runs/exp_custom
+
+
+
+
+
+
+Proposed Steps
+To incorporate these ideas into your project, follow this roadmap:
+
+1) Modify Training Hyperparameters:
+
+    Replace the optimizer with AdamW or Ranger in the YOLOv5 codebase.
+    Add a cyclical learning rate scheduler.
+    Enable early stopping.
+    NAN Values handle.
+    
+
+2) Write a k-Fold Cross-Validation Script:
+    Automate the splitting and iterative training process.
+    Collect performance metrics (precision, recall, mAP) for each fold.
+    Perform Experiments:
+
+3) Train the model with different optimizers and learning rates.
+    Compare metrics (e.g., precision, recall, mAP) with the results in the paper.
+    Train and validate with k-fold cross-validation.
+
+4) Visualize and Analyze Results:
+
+    Plot precision-recall curves for all experiments.
+    Compare metrics across different configurations.
+
+
+
+
+
+
+8) modify training hyperparameters in train.py in yolov5 folder 
+-> Replace the Optimizer:AdamW
+-> Add a Cyclical Learning Rate Scheduler
+-> Enable Early Stopping -> patience argument used in cmd
+
+
+
+
+9) 1st train
+
+python train.py --img 640 --batch 16 --epochs 300 --data ../data/dataset_split/data.yaml --weights yolov5s.pt --project ../runs/train --name exp_face_mask --patience 20 --hyp data/hyps/hyp.scratch-low.yaml
+
+
+
+

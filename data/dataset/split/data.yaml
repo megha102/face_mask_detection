@@ -1,0 +1,12 @@
+train: /home/hice1/mgulati30/Final Project/data/dataset/split/train/images
+val: /home/hice1/mgulati30/Final Project/data/dataset/split/val/images
+test: /home/hice1/mgulati30/Final Project/data/dataset/split/test/images  
+
+
+nc: 3
+
+
+names:
+  0: with_mask
+  1: without_mask
+  2: mask_weared_incorrect
